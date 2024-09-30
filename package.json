@@ -7,9 +7,18 @@
   "files": [
     "/dist"
   ],
-  "devDependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint": "^9.11.1",
+    "husky": "^8.0.0",
+    "prettier": "3.3.3"
+  },
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
