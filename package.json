@@ -1,0 +1,33 @@
+{
+  "name": "ts-riotapi",
+  "version": "0.0.1",
+  "description": "Riot API client library written in TypeScript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marc-doblefilo/ts-riotapi.git"
+  },
+  "keywords": [
+    "riot",
+    "riotapi",
+    "tsriot",
+    "lol",
+    "leagueoflegends",
+    "valorant",
+    "lolapi"
+  ],
+  "author": "Marc Rodríguez",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/marc-doblefilo/ts-riotapi/issues"
+  },
+  "homepage": "https://github.com/marc-doblefilo/ts-riotapi#readme"
+}
