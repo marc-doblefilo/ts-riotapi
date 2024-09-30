@@ -4,6 +4,7 @@ export class AccountV1 {
   public readonly tagLine: string;
 
   constructor(query: { puuid: string; gameName: string; tagLine: string }) {
+    this.puuid = query.puuid;
     this.gameName = query.gameName;
     this.tagLine = query.tagLine;
   }
