@@ -5,5 +5,8 @@ export default defineConfig({
   test: {
     env: loadEnv('test', process.cwd(), ''),
     globals: true,
+    coverage: {
+      reporter: ['json-summary'],
+    },
   },
 });

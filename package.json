@@ -27,8 +27,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "vitest",
-    "ci:coverage": "vitest run --coverage.enabled --coverage.reporter='text-summary'",
-    "coverage": "vitest run --coverage",
+    "coverage": "vitest --coverage",
     "prepare": "husky install"
   },
   "repository": {
