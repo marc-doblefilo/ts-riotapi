@@ -7,4 +7,9 @@ export interface IRiotApiService {
     tagLine: string;
     region: Regions;
   }): Promise<AccountV1>;
+
+  getAccountByPuuid(query: {
+    puuid: string;
+    region: Regions;
+  }): Promise<AccountV1>;
 }

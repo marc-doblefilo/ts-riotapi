@@ -24,4 +24,20 @@ describe('AccountV1Factory', () => {
       expect(accountV1.tagLine).toBe('MDK');
     });
   });
+
+  describe('getAccountV1ByPuuid', () => {
+    it('return AccountV1', async () => {
+      const puuid =
+        'fF4QJNW_FBlBzKWjR45ZnGkjUWZF066sdx_LeOA4AbflJISOkjLKHIb9fcc715xJEcGpqQuvIGRh4g';
+      const accountV1 = await accountV1Factory.getAccountV1ByPuuid({
+        puuid,
+        region: Regions.EUROPE,
+      });
+
+      expect(accountV1).toBeDefined();
+      expect(accountV1.puuid).toBe(puuid);
+      expect(accountV1.gameName).toBe('D0NATELL0');
+      expect(accountV1.tagLine).toBe('MDK');
+    });
+  });
 });

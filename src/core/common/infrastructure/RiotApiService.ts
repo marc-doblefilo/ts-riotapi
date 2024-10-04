@@ -43,14 +43,35 @@ export class RiotApiService implements IRiotApiService {
       params: { gameName, tagLine },
     });
 
-    console.info(url);
-
     const response = await fetch(url);
 
     if (!response.ok) {
       throw new Error(
         `Failed to get account by riot id: ${response.statusText}`,
       );
+    }
+
+    const responseData = await response.json();
+
+    return new AccountV1({ ...responseData });
+  }
+
+  public async getAccountByPuuid(query: {
+    puuid: string;
+    region: Regions;
+  }): Promise<AccountV1> {
+    const { region, puuid } = query;
+
+    const url = this.generateUrl({
+      baseUrl: this.getBaseUrlByRegion(region),
+      endpoint: EndpointsEnum.ACCOUNTV1BYPUUID,
+      params: { puuid },
+    });
+
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`Failed to get account by puuid: ${response.statusText}`);
     }
 
     const responseData = await response.json();

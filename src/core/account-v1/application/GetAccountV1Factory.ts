@@ -12,4 +12,11 @@ export class GetAccountV1Factory {
   }): Promise<AccountV1> {
     return await this.riotApiService.getAccountByRiotId(query);
   }
+
+  public async getAccountV1ByPuuid(query: {
+    puuid: string;
+    region: Regions;
+  }): Promise<AccountV1> {
+    return await this.riotApiService.getAccountByPuuid(query);
+  }
 }
